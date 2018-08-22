@@ -10,29 +10,40 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            double num=0,cubo=0,cuadrado=0;
-            int potencia = 3;
-            int poitenciaCuad = 2;
-         
+            int num = 0;
+            int max=0;
+            int min=0;
+            int i;
             
-               Console.WriteLine("Introduce un número:");
-               num = int.Parse(Console.ReadLine());
 
-            if (num > 0)
+            for (i = 0; i < 5; i++)
             {
+                Console.WriteLine("ingrese un numero: ");
+                num = int.Parse(Console.ReadLine());
 
-                cubo = Math.Pow(num, potencia);
-                cuadrado = Math.Pow(num, poitenciaCuad);
-            }
-            else
-            {
-                Console.WriteLine("ERROR!");
-            }
-            Console.WriteLine("Su cubo es  " + cubo);
-            Console.WriteLine("Su cuadrado es  " + cuadrado);
+                if (i == 0)
+                {
+                max = num;
+                min = num;
+                }
+                    else if (i != 0)
+                    {
+                         if (num > max)
+                         {
+                             max = num;
+                         }
+                         else if(num < min)
+                         {
+                             min = max;
+                         }
+                    }
 
+            }
+            
+            
+            Console.WriteLine("El mayor numero es : "+ max);
+            Console.WriteLine("El menor numero es : " + min);
             Console.ReadKey();
-
         }
     }
 }
