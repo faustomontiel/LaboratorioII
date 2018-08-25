@@ -10,36 +10,19 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            int a = 0,i, num;
-            Console.WriteLine("Ingrese numero");
-            num = Convert.ToInt32(Console.ReadLine());
+            double resultadoCuad,resultadoCub, numero;
+            int cuadrado = 2;
+            int cubo = 3;
 
-            for (int j = 0; j < num; j++)
-            {
+            Console.Write("Ingrese un numero para saber su Cuadrado y su Cubo: ");
+            numero = int.Parse(Console.ReadLine());
 
-                for ( i = 1; i < (num+1) ; i++)
-                {
-                    if (num % i == 0)
-                    {
-                        a++;
-                    }
-                }
+            resultadoCuad = Math.Pow(numero, cuadrado);
+            resultadoCub = Math.Pow(numero, cubo);
+            Console.WriteLine("La Cuadrado de " + numero + " es "+ resultadoCuad+" y su cubo es "+resultadoCub);
+            Console.ReadKey();
 
-                if (a != 2)
-                {
-                    Console.WriteLine(" "+j);
-                }
-                else
-                {
-                    
-                   Console.WriteLine(" "+i );
-                }
-             }
-                Console.ReadLine();
+
         }
     }
-
-  }
-
-
-
+}
