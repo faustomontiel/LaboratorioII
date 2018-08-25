@@ -10,39 +10,33 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int num = 0;
-            int max=0;
-            int min=0;
+            int num;
+            int max = 0;
+            int min= 0;
             int i;
-            
+            bool flag = false;
+
 
             for (i = 0; i < 5; i++)
             {
                 Console.WriteLine("ingrese un numero: ");
                 num = int.Parse(Console.ReadLine());
 
-                if (i == 0)
+                if (num < min || flag == false)
                 {
-                max = num;
-                min = num;
+                    min = num;
+                    flag = true;
                 }
-                    else if (i != 0)
-                    {
-                         if (num > max)
-                         {
-                             max = num;
-                         }
-                         else if(num < min)
-                         {
-                             min = max;
-                         }
-                    }
 
+                if (num > max || flag == false)
+                {
+                    max = num;
+                    flag = true;
+                }
             }
-            
-            
-            Console.WriteLine("El mayor numero es : "+ max);
             Console.WriteLine("El menor numero es : " + min);
+            Console.WriteLine("El mayor numero es : " + max);
+            
             Console.ReadKey();
         }
     }
