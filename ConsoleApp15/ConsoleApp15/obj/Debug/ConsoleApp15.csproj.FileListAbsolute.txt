@@ -1,0 +1,6 @@
+D:\VisualStudio\ConsoleApp15\ConsoleApp15\bin\Debug\ConsoleApp15.exe.config
+D:\VisualStudio\ConsoleApp15\ConsoleApp15\bin\Debug\ConsoleApp15.exe
+D:\VisualStudio\ConsoleApp15\ConsoleApp15\bin\Debug\ConsoleApp15.pdb
+D:\VisualStudio\ConsoleApp15\ConsoleApp15\obj\Debug\ConsoleApp15.csproj.CoreCompileInputs.cache
+D:\VisualStudio\ConsoleApp15\ConsoleApp15\obj\Debug\ConsoleApp15.exe
+D:\VisualStudio\ConsoleApp15\ConsoleApp15\obj\Debug\ConsoleApp15.pdb

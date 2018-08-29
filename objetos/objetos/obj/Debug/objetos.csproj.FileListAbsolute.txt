@@ -1,0 +1,7 @@
+D:\VisualStudio\objetos\objetos\bin\Debug\objetos.exe.config
+D:\VisualStudio\objetos\objetos\bin\Debug\objetos.exe
+D:\VisualStudio\objetos\objetos\bin\Debug\objetos.pdb
+D:\VisualStudio\objetos\objetos\obj\Debug\objetos.csprojAssemblyReference.cache
+D:\VisualStudio\objetos\objetos\obj\Debug\objetos.csproj.CoreCompileInputs.cache
+D:\VisualStudio\objetos\objetos\obj\Debug\objetos.exe
+D:\VisualStudio\objetos\objetos\obj\Debug\objetos.pdb
