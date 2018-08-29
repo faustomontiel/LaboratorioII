@@ -32,36 +32,46 @@ namespace objetos
         public void CalcularFinal()
         {
             Random miRamdom = new Random();
-           
+
             if (this._nota1 >= 4 && this._nota2 >= 4)
             {
-                this._notaFinal = miRamdom.Next(1,10);
+                this._notaFinal = miRamdom.Next(1, 10);
 
             }
             else
             {
                 this._notaFinal = -1;
+                Console.WriteLine("desaprobo");
+
+
             }
-             
+
         }
         public string Mostrar()
         {
+        
             StringBuilder sb = new StringBuilder();
             sb.Append("NOMBRE: ");
             sb.AppendLine(this.nombre);
             sb.Append("APELLIDO: ");
             sb.AppendLine(this.nombre);
-           /* sb.Append("Nota 1: ");
+            sb.Append("Nota 1: ");
             sb.AppendLine(this._nota1.ToString());
             sb.Append("Nota 2: ");
             sb.AppendLine(this._nota2.ToString());
-            */
+            if (this._notaFinal == -1)
+            {
+                sb.Append("Nota Final: DESAPROBO");
+
+            }
+            else
+            {
+                sb.Append("Nota Final: ");
+                sb.AppendLine(this._notaFinal.ToString());
+            }
+
             return sb.ToString();
-
+           
         }
-
-
-
-
     }
 }

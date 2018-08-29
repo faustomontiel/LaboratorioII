@@ -5,3 +5,10 @@ D:\VisualStudio\objetos\objetos\obj\Debug\objetos.csprojAssemblyReference.cache
 D:\VisualStudio\objetos\objetos\obj\Debug\objetos.csproj.CoreCompileInputs.cache
 D:\VisualStudio\objetos\objetos\obj\Debug\objetos.exe
 D:\VisualStudio\objetos\objetos\obj\Debug\objetos.pdb
+C:\Users\nelso\Downloads\LaboratorioII-master\objetos\objetos\bin\Debug\objetos.exe.config
+C:\Users\nelso\Downloads\LaboratorioII-master\objetos\objetos\bin\Debug\objetos.exe
+C:\Users\nelso\Downloads\LaboratorioII-master\objetos\objetos\bin\Debug\objetos.pdb
+C:\Users\nelso\Downloads\LaboratorioII-master\objetos\objetos\obj\Debug\objetos.csprojAssemblyReference.cache
+C:\Users\nelso\Downloads\LaboratorioII-master\objetos\objetos\obj\Debug\objetos.csproj.CoreCompileInputs.cache
+C:\Users\nelso\Downloads\LaboratorioII-master\objetos\objetos\obj\Debug\objetos.exe
+C:\Users\nelso\Downloads\LaboratorioII-master\objetos\objetos\obj\Debug\objetos.pdb

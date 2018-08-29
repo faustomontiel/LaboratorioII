@@ -16,11 +16,11 @@ namespace objetos
 
             alumno.estudiar(7,8);
             alumno2.estudiar(6, 7);
-            alumno3.estudiar(7, 5);
+            alumno3.estudiar(0, 5);
 
-            alumno.Mostrar();
-            alumno2.Mostrar();
-            alumno3.Mostrar();
+           Console.WriteLine(alumno.Mostrar());
+           Console.WriteLine(alumno2.Mostrar());
+           Console.WriteLine(alumno3.Mostrar());
 
             Console.ReadKey();
 
