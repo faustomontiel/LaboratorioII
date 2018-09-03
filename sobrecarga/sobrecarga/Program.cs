@@ -13,8 +13,12 @@ namespace sobrecarga
             //  Console.WriteLine(ClaseSobrecarga.Sumar(1, 2) + ClaseSobrecarga.Sumar(1, 2, 3));
             //Sobrecarga sobrecarga = new Sobrecarga();
             //sobrecarga.Sumar(500, 500);
-           
-            Console.WriteLine((new Metro(5)+ new Centimetro(800)).valor);
+            Metro metro = new Metro(5);
+            Centimetro centimetro = new Centimetro(800);
+            Metro resultado = metro + centimetro;
+
+
+            Console.WriteLine(resultado.valor);
             Console.ReadKey();
         }
     }
