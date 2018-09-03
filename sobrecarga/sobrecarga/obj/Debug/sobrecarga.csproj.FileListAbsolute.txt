@@ -1,0 +1,7 @@
+D:\VisualStudio\sobrecarga\sobrecarga\bin\Debug\sobrecarga.exe.config
+D:\VisualStudio\sobrecarga\sobrecarga\bin\Debug\sobrecarga.exe
+D:\VisualStudio\sobrecarga\sobrecarga\bin\Debug\sobrecarga.pdb
+D:\VisualStudio\sobrecarga\sobrecarga\obj\Debug\sobrecarga.csprojAssemblyReference.cache
+D:\VisualStudio\sobrecarga\sobrecarga\obj\Debug\sobrecarga.csproj.CoreCompileInputs.cache
+D:\VisualStudio\sobrecarga\sobrecarga\obj\Debug\sobrecarga.exe
+D:\VisualStudio\sobrecarga\sobrecarga\obj\Debug\sobrecarga.pdb
