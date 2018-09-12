@@ -6,152 +6,133 @@ using System.Threading.Tasks;
 
 namespace Billetes
 {
-  public class Euro
-  {
-    private double cantidad;
-    private static float cotizRespectoDolar;
-
-    private Euro()
+    public class Euro
     {
-      cotizRespectoDolar = 0.7330F;
+        private double cantidad;
+        private static float cotizRespectoDolar;
+
+        private Euro()
+        {
+            cotizRespectoDolar = (float)0.7330;
+        }
+
+        public Euro(double cantidad) : this()
+        {
+            this.cantidad = cantidad;
+        }
+
+        public Euro(double cantidad, float cotizacion) : this(cantidad)
+        {
+            cotizRespectoDolar = cotizacion;
+        }
+
+
+        public double GetCantidad()
+        {
+            return this.cantidad;
+        }
+
+        public static float GetCotizacion()
+        {
+            float cotizacion;
+
+            return cotizacion = cotizRespectoDolar;
+
+        }
+
+        public static explicit operator Dolar(Euro euro)
+        {
+            return new Dolar(euro.GetCantidad() / Euro.GetCotizacion());
+        }
+
+        public static explicit operator Pesos(Euro euro)
+        {
+            return new Pesos((euro.GetCantidad() / Euro.GetCotizacion()) * Pesos.GetCotizacion());
+        }
+
+        public static implicit operator Euro(double cantidad)
+        {
+            return new Euro(cantidad);
+        }
+
+        public static bool operator ==(Euro euro, Dolar dolar)
+        {
+            bool flag = false;
+
+            if (((Dolar)euro).GetCantidad() == dolar.GetCantidad())
+            {
+                flag = true;
+            }
+
+            return flag;
+        }
+
+        public static bool operator ==(Euro euro, Pesos peso)
+        {
+            bool flag = false;
+
+            if (((Pesos)euro).GetCantidad() == peso.GetCantidad())
+            {
+                flag = true;
+            }
+
+            return flag;
+        }
+
+        public static bool operator ==(Euro euro1, Euro euro2)
+        {
+            bool flag = false;
+
+            if (euro1.GetCantidad() == euro2.GetCantidad())
+            {
+                flag = true;
+            }
+
+            return flag;
+        }
+
+        public static bool operator !=(Euro euro1, Euro euro2)
+        {
+            return !(euro1 == euro2);
+        }
+
+
+        public static bool operator !=(Euro euro, Pesos peso)
+        {
+            return !(euro == peso);
+        }
+
+
+        public static bool operator !=(Euro euro, Dolar dolar)
+        {
+            return !(euro == dolar);
+        }
+
+
+        public static Euro operator +(Euro euro, Dolar dolar)
+        {
+            return new Euro(euro.GetCantidad() + ((Euro)dolar).GetCantidad());
+
+        }
+
+        public static Euro operator +(Euro e, Pesos p)
+        {
+            return new Euro(e.GetCantidad() + ((Euro)p).GetCantidad());
+
+        }
+
+        public static Euro operator -(Euro euro, Dolar dolar)
+        {
+            return new Euro(euro.GetCantidad() - ((Euro)dolar).GetCantidad());
+
+
+        }
+
+        public static Euro operator -(Euro euro, Pesos peso)
+        {
+            return new Euro(euro.GetCantidad() - ((Euro)peso).GetCantidad());
+
+
+        }
     }
-
-    public Euro(double cantidad) : this()
-    {
-      this.cantidad = cantidad;
-    }
-
-    public Euro(double cantidad, float cotizacion) : this(cantidad)
-    {
-      cotizRespectoDolar = cotizacion;
-    }
-
-
-    public double GetCantidad()
-    {
-      double cantidad;
-
-      cantidad = this.cantidad;
-
-      cantidad = Math.Round(cantidad, 4);
-
-      return cantidad;
-    }
-
-    public static float GetCotizacion()
-    {
-      float cotizacion;
-
-      cotizacion = cotizRespectoDolar;
-
-      return cotizacion;
-    }
-
-    public static explicit operator Dolar(Euro euro)
-    {
-      Dolar dolar = new Dolar(euro.GetCantidad() / Euro.GetCotizacion());
-
-      return dolar;
-    }
-
-    public static explicit operator Pesos(Euro euro)
-    {
-      Pesos peso = new Pesos((euro.GetCantidad() / Euro.GetCotizacion()) * Pesos.GetCotizacion());
-
-      return peso;
-    }
-
-    public static implicit operator Euro(double cantidad)
-    {
-      Euro euro = new Euro(cantidad);
-
-      return euro;
-    }
-
-    public static bool operator ==(Euro e, Dolar d)
-    {
-      bool ok = false;
-
-      if (((Dolar)e).GetCantidad() == d.GetCantidad())
-      {
-        ok = true;
-      }
-
-      return ok;
-    }
-
-    public static bool operator ==(Euro e, Pesos p)
-    {
-      bool ok = false;
-
-      if (((Pesos)e).GetCantidad() == p.GetCantidad())
-      {
-        ok = true;
-      }
-
-      return ok;
-    }
-
-    public static bool operator ==(Euro e1, Euro e2)
-    {
-      bool ok = false;
-
-      if (e1.GetCantidad() == e2.GetCantidad())
-      {
-        ok = true;
-      }
-
-      return ok;
-    }
-
-    public static bool operator !=(Euro e1, Euro e2)
-    {
-      return !(e1 == e2);
-    }
-
-
-    public static bool operator !=(Euro e, Pesos p)
-    {
-      return !(e == p);
-    }
-
-
-    public static bool operator !=(Euro e, Dolar d)
-    {
-      return !(e == d);
-    }
-
-
-    public static Euro operator +(Euro e, Dolar d)
-    {
-      Euro euro = new Euro(e.GetCantidad() + ((Euro)d).GetCantidad());
-
-      return euro;
-    }
-
-    public static Euro operator +(Euro e, Pesos p)
-    {
-      Euro euro = new Euro(e.GetCantidad() + ((Euro)p).GetCantidad());
-
-      return euro;
-    }
-
-    public static Euro operator -(Euro e, Dolar d)
-    {
-      Euro euro = new Euro(e.GetCantidad() - ((Euro)d).GetCantidad());
-
-      return euro;
-    }
-
-    public static Euro operator -(Euro e, Pesos p)
-    {
-      Euro euro = new Euro(e.GetCantidad() - ((Euro)p).GetCantidad());
-
-      return euro;
-    }
-
-
-
-
-  }
 }

@@ -11,11 +11,7 @@ namespace ConsoleApp20
   {
     static void Main(string[] args)
     {
-      Pesos peso = new Pesos(17.55);
-      Dolar dolar = new Dolar(1);
-      Euro euro = new Euro(0.733);
-
-
+   
 
 
     }
