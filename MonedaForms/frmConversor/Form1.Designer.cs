@@ -127,6 +127,7 @@ namespace frmConversor
             this.btnConverPeso.TabIndex = 8;
             this.btnConverPeso.Text = "->";
             this.btnConverPeso.UseVisualStyleBackColor = true;
+            this.btnConverPeso.Click += new System.EventHandler(this.btnConverPeso_Click);
             // 
             // lblEuro2
             // 
@@ -255,7 +256,6 @@ namespace frmConversor
             this.Controls.Add(this.lblEuro);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

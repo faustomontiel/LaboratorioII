@@ -34,9 +34,8 @@ namespace frmConversor
                 dolarE = (Dolar)nuevoEuro;
 
                 txtEuroADolar.Text = Convert.ToString(dolarE.GetCantidad());
-
-                Euro pesoEuro = new Euro(euro);
-                pesoE = (Pesos)pesoEuro;
+                //mal
+                pesoE = (Pesos)nuevoEuro;
                 txtEuroAPeso.Text = Convert.ToString(pesoE.GetCantidad());
 
 
@@ -53,10 +52,7 @@ namespace frmConversor
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnConverDolar_Click(object sender, EventArgs e)
         {
@@ -75,7 +71,7 @@ namespace frmConversor
                 euroDolar = (Euro)nuevoDolar;
 
                 txtDolarAEuro.Text = Convert.ToString(euroDolar.GetCantidad());
-
+                //bien
                 pesosDolar = (Pesos)nuevoDolar;
                 txtDolarAPeso.Text = Convert.ToString(pesosDolar.GetCantidad());
 
@@ -88,6 +84,39 @@ namespace frmConversor
                 txtDolarAPeso.Text = "Invalido";
 
             }
+        }
+
+        private void btnConverPeso_Click(object sender, EventArgs e)
+        {
+            double peso;
+            Euro euroPeso;
+            Dolar pesosDolar;
+
+
+            if (double.TryParse(txtPeso.Text, out peso))
+            {
+                txtPesoAPeso.Text = Convert.ToString(peso);
+
+
+                Pesos nuevoPeso = new Pesos(peso);
+
+                euroPeso = (Euro)nuevoPeso;
+
+                txtPesoAEuro.Text = Convert.ToString(euroPeso.GetCantidad());
+                //bien
+                pesosDolar = (Dolar)nuevoPeso;
+                txtPesoADolar.Text = Convert.ToString(pesosDolar.GetCantidad());
+
+
+            }
+            else
+            {
+                txtPesoAPeso.Text = "Invalido";
+                txtPesoAEuro.Text = "Invalido";
+                txtPesoADolar.Text = "Invalido";
+
+            }
+
         }
     }
 }

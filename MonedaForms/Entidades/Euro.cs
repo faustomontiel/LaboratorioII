@@ -14,7 +14,7 @@ namespace Moneda
 
         private Euro()
         {
-            cotizRespectoDolar = (float)0.7330;
+            cotizRespectoDolar = 0.733F;
         }
 
         public Euro(double cantidad) : this()
@@ -34,10 +34,9 @@ namespace Moneda
         }
 
         public static float GetCotizacion()
-        {
-            float cotizacion;
+        {    
 
-            return cotizacion = cotizRespectoDolar;
+            return Euro.cotizRespectoDolar;
 
         }
 
