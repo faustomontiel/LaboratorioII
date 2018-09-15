@@ -34,7 +34,6 @@ namespace frmConversor
                 dolarE = (Dolar)nuevoEuro;
 
                 txtEuroADolar.Text = Convert.ToString(dolarE.GetCantidad());
-                //mal
                 pesoE = (Pesos)nuevoEuro;
                 txtEuroAPeso.Text = Convert.ToString(pesoE.GetCantidad());
 

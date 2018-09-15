@@ -14,7 +14,7 @@ namespace Moneda
 
         private Euro()
         {
-            cotizRespectoDolar = 0.733F;
+            cotizRespectoDolar = 1.16F;
         }
 
         public Euro(double cantidad) : this()
