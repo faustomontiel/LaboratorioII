@@ -1,1 +1,6 @@
-commit
+cd desktop/LaboratorioII
+git status 
+git add -A
+git commit -m 'commit'
+(git remote add origin https://github.com/faustomontiel/LaboratorioII.git)
+git push -u origin master
