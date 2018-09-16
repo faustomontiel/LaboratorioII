@@ -11,7 +11,7 @@ namespace Moneda
     {
         private double cantidad;
         private static float cotizRespectoDolar;
-
+        //
         private Euro()
         {
             cotizRespectoDolar = 1.16F;
