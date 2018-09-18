@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.cmbMoneda = new System.Windows.Forms.ComboBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(145, 97);
+            this.btnAceptar.Location = new System.Drawing.Point(172, 178);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 0;
@@ -41,21 +43,44 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // cmbMoneda
+            // 
+            this.cmbMoneda.FormattingEnabled = true;
+            this.cmbMoneda.Location = new System.Drawing.Point(146, 123);
+            this.cmbMoneda.Name = "cmbMoneda";
+            this.cmbMoneda.Size = new System.Drawing.Size(177, 21);
+            this.cmbMoneda.TabIndex = 1;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(419, 208);
+            this.maskedTextBox1.Mask = "00/00/0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 2;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.cmbMoneda);
             this.Controls.Add(this.btnAceptar);
             this.Name = "frmPrincipal";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.ComboBox cmbMoneda;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
 

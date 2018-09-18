@@ -6,11 +6,19 @@ using System.Threading.Tasks;
 
 namespace Encapsulamiento
 {
+
+    public enum ETipoMoneda
+    {
+        Pesos,
+        Dolar,
+        Euro
+    }
+
     public class Factura
     {
         int numero;
         DateTime fecha;
-        int moneda;
+        ETipoMoneda moneda;
         List<Producto> productos;
         int tipo;
 
@@ -83,7 +91,7 @@ namespace Encapsulamiento
         }
 
 
-        public int Moneda
+        public ETipoMoneda Moneda
         {
             get { return this.moneda; }
             set { this.moneda = value; }
@@ -104,7 +112,22 @@ namespace Encapsulamiento
                     total += item.Total;
                 }
 
-                return total;
+
+                double totalPesos;
+                switch(moneda)
+                {
+                    case ETipoMoneda.Dolar:
+                        totalPesos = total * 40;
+                        break;
+                    case ETipoMoneda.Euro:
+                        totalPesos = total * 46;
+                        break;
+                    default:
+                        totalPesos = total;
+                        break;
+
+                }
+                return totalPesos;
             }
         }
 
