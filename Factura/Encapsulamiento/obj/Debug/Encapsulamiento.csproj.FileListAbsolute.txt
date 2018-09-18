@@ -1,0 +1,10 @@
+D:\VisualStudio\Encapsulamiento\Encapsulamiento\bin\Debug\Encapsulamiento.exe.config
+D:\VisualStudio\Encapsulamiento\Encapsulamiento\bin\Debug\Encapsulamiento.exe
+D:\VisualStudio\Encapsulamiento\Encapsulamiento\bin\Debug\Encapsulamiento.pdb
+D:\VisualStudio\Encapsulamiento\Encapsulamiento\obj\Debug\Encapsulamiento.csprojAssemblyReference.cache
+D:\VisualStudio\Encapsulamiento\Encapsulamiento\obj\Debug\Encapsulamiento.Properties.Resources.resources
+D:\VisualStudio\Encapsulamiento\Encapsulamiento\obj\Debug\Encapsulamiento.csproj.GenerateResource.cache
+D:\VisualStudio\Encapsulamiento\Encapsulamiento\obj\Debug\Encapsulamiento.csproj.CoreCompileInputs.cache
+D:\VisualStudio\Encapsulamiento\Encapsulamiento\obj\Debug\Encapsulamiento.exe
+D:\VisualStudio\Encapsulamiento\Encapsulamiento\obj\Debug\Encapsulamiento.pdb
+D:\VisualStudio\Encapsulamiento\Encapsulamiento\obj\Debug\Encapsulamiento.frmPrincipal.resources
