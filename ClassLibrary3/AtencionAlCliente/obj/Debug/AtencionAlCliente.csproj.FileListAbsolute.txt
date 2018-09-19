@@ -1,0 +1,10 @@
+D:\VisualStudio\ClassLibrary3\AtencionAlCliente\bin\Debug\AtencionAlCliente.exe.config
+D:\VisualStudio\ClassLibrary3\AtencionAlCliente\bin\Debug\AtencionAlCliente.exe
+D:\VisualStudio\ClassLibrary3\AtencionAlCliente\bin\Debug\AtencionAlCliente.pdb
+D:\VisualStudio\ClassLibrary3\AtencionAlCliente\bin\Debug\Entidades.dll
+D:\VisualStudio\ClassLibrary3\AtencionAlCliente\bin\Debug\Entidades.pdb
+D:\VisualStudio\ClassLibrary3\AtencionAlCliente\obj\Debug\AtencionAlCliente.csprojAssemblyReference.cache
+D:\VisualStudio\ClassLibrary3\AtencionAlCliente\obj\Debug\AtencionAlCliente.csproj.CoreCompileInputs.cache
+D:\VisualStudio\ClassLibrary3\AtencionAlCliente\obj\Debug\AtencionAlCliente.csproj.CopyComplete
+D:\VisualStudio\ClassLibrary3\AtencionAlCliente\obj\Debug\AtencionAlCliente.exe
+D:\VisualStudio\ClassLibrary3\AtencionAlCliente\obj\Debug\AtencionAlCliente.pdb
