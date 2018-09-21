@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
 
 
 namespace Entidades
@@ -16,10 +17,11 @@ namespace Entidades
         private Negocio()
         {
             this.clientes = new Queue<Cliente>();
-            this.caja = this.caja;
+            this.caja = new PuestoAtencion(Puesto.caja1);
         }
-        public Negocio(string nombre)
-        {
+        public Negocio(string nombre) : this() // esto es necesario porque cuando instancien este constructor
+        {                                     // desde el program ya va estar instanseado con los atributos cargados
+                                              //en el constructor privado.
             this.nombre = nombre;
         }
 
@@ -29,29 +31,21 @@ namespace Entidades
             {
 
                 return this.clientes.Dequeue();
+
             }
             set
             {
-                bool encontro = false;
+                bool agregado = this + value;
 
-                foreach (Cliente item in this.clientes)
-                {
-                    if (item == value)
-                    {
-                        encontro = true;
-                    }
-                    if (!encontro)
-                    {
-                        this.clientes.Enqueue(value);
-                    }
-                }
             }
         }
-        public int ClientesPendientes
+        public int ClientesPendientes 
         {
             get
             {
-                return this.clientes.Count;
+                
+                    return this.clientes.Count;
+                
             }
         }
 
@@ -66,12 +60,10 @@ namespace Entidades
         }
         public static bool operator ==(Negocio n, Cliente c)
         {
-            for (int i = 0; n.clientes.Count > 0; i++)
+            foreach (Cliente AlgunCliente in n.clientes)
             {
-                if (n.clientes.Contains(c))
-                {
+                if (AlgunCliente == c)
                     return true;
-                }
             }
             return false;
         }
@@ -81,15 +73,7 @@ namespace Entidades
         }
         public static bool operator ~(Negocio n)
         {
-            PuestoAtencion puesto = new PuestoAtencion();
-            Cliente cliente;
-            
-            //verificar esto
-            cliente = n.Cliente;
-            puesto.Atender();
-            
-
-            return true;
+            return n.caja.Atender(n.Cliente);
 
         }
 

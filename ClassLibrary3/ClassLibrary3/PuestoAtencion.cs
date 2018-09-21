@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
 
 namespace Entidades
 {
@@ -24,13 +25,17 @@ namespace Entidades
                 return PuestoAtencion.numeroActual + 1;
             }
         }
-        public bool Atender()
+        public bool Atender(Cliente cliente)
         {
             Random r = new Random();
            
             System.Threading.Thread.Sleep(r.Next(1000, 3000));
 
             return true;
+        }
+        public PuestoAtencion(Puesto puesto)
+        {
+            this.puesto = puesto;
         }
 
         public PuestoAtencion()
