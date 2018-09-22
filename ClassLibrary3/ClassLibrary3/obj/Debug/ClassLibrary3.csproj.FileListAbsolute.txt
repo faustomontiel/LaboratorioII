@@ -1,6 +1,0 @@
-D:\VisualStudio\ClassLibrary3\ClassLibrary3\bin\Debug\Entidades.dll
-D:\VisualStudio\ClassLibrary3\ClassLibrary3\bin\Debug\Entidades.pdb
-D:\VisualStudio\ClassLibrary3\ClassLibrary3\obj\Debug\ClassLibrary3.csprojAssemblyReference.cache
-D:\VisualStudio\ClassLibrary3\ClassLibrary3\obj\Debug\ClassLibrary3.csproj.CoreCompileInputs.cache
-D:\VisualStudio\ClassLibrary3\ClassLibrary3\obj\Debug\Entidades.dll
-D:\VisualStudio\ClassLibrary3\ClassLibrary3\obj\Debug\Entidades.pdb
