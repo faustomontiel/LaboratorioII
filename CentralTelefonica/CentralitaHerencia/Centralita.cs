@@ -100,7 +100,7 @@ namespace CentralitaHerencia
         public string Mostrar()
         {
             StringBuilder mostrar = new StringBuilder();
-            mostrar.Append("\n*******************\n");
+            mostrar.Append("*******************\n");
             mostrar.AppendFormat("RAZON SOCIAL: {0}", this.razonSocial);
             mostrar.AppendFormat("\nGanancia TOTAL: {0}", this.GananciasPorTotal);
             mostrar.AppendFormat("\nGanancia LOCAL: {0}", this.GananciasPorLocal);
@@ -109,7 +109,7 @@ namespace CentralitaHerencia
             mostrar.Append("\nLLAMADAS: \n");
             foreach (Llamada llamada in this.listaDeLlamadas)
             {
-                mostrar.Append("\n---------------\n");
+                mostrar.Append("---------------\n");
                 mostrar.Append(llamada.Mostrar());
             }
 
