@@ -26,8 +26,7 @@ namespace ConsoleApp35
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendFormat("Nombre: {0}", this._dni);
-            sb.AppendFormat("Dni: {0}", this._nombre);
+            sb.Append(base.MostrarDatos());
             sb.AppendFormat("Fecha de Nacimietno: {0}", this.fechaDeNacimiento);
 
             return sb.ToString();

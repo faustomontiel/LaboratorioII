@@ -44,7 +44,8 @@ namespace ConsoleApp35
         }
 
         // metodos y constructores
-        public Jugador(int dni, string nombre) : base(dni, nombre)
+        public Jugador(int dni, string nombre) 
+            : base(dni, nombre)
         {
 
         }
@@ -59,8 +60,7 @@ namespace ConsoleApp35
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendFormat("Dni: {0}\n", this._dni);
-            sb.AppendFormat("Nombre: {0}\n", this._nombre);
+            sb.Append(base.MostrarDatos());
             sb.AppendFormat("Partidos Jugados: {0}\n", this.partidosJugados);
             sb.AppendFormat("Goles: {0}\n", this.totalGoles);
             sb.AppendFormat("Promedio de Gol: {0}\n", this.PromedioDeGoles);

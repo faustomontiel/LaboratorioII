@@ -49,8 +49,8 @@ namespace ConsoleApp35
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendFormat("Nombre: {0}", this._dni);
-            sb.AppendFormat("Dni: {0}", this._nombre);
+            sb.AppendFormat("Dni: {0}\n", this._dni);
+            sb.AppendFormat("Nombre: {0}\n", this._nombre);
 
             return sb.ToString();
 

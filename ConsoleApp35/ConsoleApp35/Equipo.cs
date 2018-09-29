@@ -12,7 +12,7 @@ namespace ConsoleApp35
         private List<Jugador> _Jugadores;
         private string _nombre;
 
-        public Equipo()
+        private Equipo()
         {
             this._Jugadores = new List<Jugador>();
             this._cantidadDeJugadores = 0;
