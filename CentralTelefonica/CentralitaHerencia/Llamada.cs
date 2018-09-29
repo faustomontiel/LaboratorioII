@@ -13,8 +13,6 @@ namespace CentralitaHerencia
         protected string _nroDestino;
         protected string _nroOrigen;
 
-        //propiedades bases.
-
         public float Duracion
         {
             get
@@ -70,7 +68,7 @@ namespace CentralitaHerencia
             {
                 retorno = 1;
             }
-            else if (llamada.Duracion < llamada1.Duracion)
+            else
             {
                 retorno = -1;
             }

@@ -35,15 +35,13 @@ namespace CentralitaHerencia
         public new string Mostrar()
         {
             StringBuilder mostrar = new StringBuilder();
-            mostrar.AppendFormat("DURACION: {0}", this._duracion);
-            mostrar.AppendFormat("Numero DESTINO: {0}", this._nroDestino);
-            mostrar.AppendFormat("Numero ORIGEN: {0}", this._nroOrigen);
-            mostrar.AppendFormat("COSTO: {0}", this.CalcularCosto());
+            mostrar.Append(base.Mostrar());
+            mostrar.AppendFormat("COSTO: {0}", this.CostoLlamada);
 
             return mostrar.ToString();
         }
        
-
+        
         private float CalcularCosto()
         {
             return this._duracion * this._costo;

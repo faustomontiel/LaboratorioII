@@ -12,7 +12,7 @@ namespace CentralitaHerencia
         protected string razonSocial;
 
 
-        public Centralita()
+        private Centralita()
         {
             this.listaDeLlamadas = new List<Llamada>();
         }
@@ -57,7 +57,7 @@ namespace CentralitaHerencia
         private float CalcularGanancia(Llamada.TipoLlamada tipo)
         {
             float ganancia = 0;
-            foreach (Llamada llamada in listaDeLlamadas)
+            foreach (Llamada llamada in this.listaDeLlamadas)
             {
                 switch (tipo)
                 {
