@@ -98,6 +98,7 @@ namespace Clase_8_Library
             empresa._nominaEmpleados.Add(empleado);
             return empresa;
         }
-        #endregion
-    }
+    
+    #endregion
+  }
 }

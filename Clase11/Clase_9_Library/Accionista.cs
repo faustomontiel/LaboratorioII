@@ -10,6 +10,21 @@ namespace Clase_8_Library
   {
     private int _porcionAcionaria;
 
+    public Accionista(Persona persona,int porcion)
+            : this(persona.Nombre, persona.Apellido, porcion)
+    {
+    }
+
+    public Accionista(string nombre, string apellido, int porcion)
+        : base(nombre, apellido)
+    {
+      this._porcionAcionaria = porcion;
+    }
+    public override string PosicionSocietaria()
+    {
+      return "Accionista con el " + this.PorcionAcionaria + " % de la porcion accionaria";
+    }
+
     public int PorcionAcionaria
     {
       get {
@@ -28,9 +43,18 @@ namespace Clase_8_Library
       }
     }
 
-    public string PorcionSocietaria()
+
+
+    protected override string Mostrar()
     {
-      return "Accionista con el "+this.PorcionAcionaria+" % de la porcion accionaria";
+      StringBuilder sb = new StringBuilder();
+
+      sb.AppendLine("Nombre  : " + base._nombre);
+      sb.AppendLine("Apellido: " + base._apellido);
+      sb.AppendLine(" " + this.PorcionAcionaria);
+      sb.AppendLine("******************");
+
+      return sb.ToString();
     }
 
     public static bool operator ==(Accionista a1,Accionista a2)
@@ -41,7 +65,7 @@ namespace Clase_8_Library
     {
       return !(a1 == a2);
     }
-
+ 
 
 
   }

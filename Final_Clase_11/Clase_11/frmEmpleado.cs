@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Clase_8_Library;
+using Clase_10_Library;
 
 namespace Clase_8
 {
@@ -64,20 +65,19 @@ namespace Clase_8
                 MessageBox.Show("Error en el salario del empleado.");
                 return;
             }
-      if (puesto == Empleado.EPuestoJerarquico.Accionista)
-      {
-        // Agrego el accionista a la empresa
-        Accionista accionista = new Accionista(txtNombre.Text, txtApellido.Text, salario);
-        this._empresa += accionista;
-      }
-      else
-      {
-
-
-        // Agrego el empleado a la empresa
-        Empleado empleado = new Empleado(txtNombre.Text, txtApellido.Text, mtxtLegajo.Text, puesto, salario);
-        this._empresa += empleado;
-      }
+            // Compruebo si debo agregar un Empleado o un Accionista
+            if (puesto == Empleado.EPuestoJerarquico.Accionista)
+            {
+                // Agrego el accionista a la empresa
+                Accionista accionista = new Accionista(txtNombre.Text, txtApellido.Text, salario);
+                this._empresa += accionista;
+            }
+            else
+            {
+                // Agrego el empleado a la empresa
+                Empleado empleado = new Empleado(txtNombre.Text, txtApellido.Text, mtxtLegajo.Text, puesto, salario);
+                this._empresa += empleado;
+            }
             // Muestro la empresa por pantalla
             rtxtConsola.Text = this._empresa.MostrarEmpresa();
         }
