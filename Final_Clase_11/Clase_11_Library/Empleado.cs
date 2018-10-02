@@ -65,7 +65,7 @@ namespace Clase_8_Library
             return !(e1 == e2);
         }
 
-        private string Mostrar()
+        public string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 

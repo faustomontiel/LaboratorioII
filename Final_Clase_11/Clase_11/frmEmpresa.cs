@@ -47,5 +47,10 @@ namespace Clase_8
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Close();
         }
+
+        private void frmEmpresa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

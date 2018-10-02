@@ -88,6 +88,7 @@ namespace Clase_8_Library
         ///// <param name="empresa">Empresa interesada.</param>
         ///// <param name="empleado">Empleado a agregar.</param>
         ///// <returns></returns>
+        ///
         //public static Empresa operator +(Empresa empresa, Empleado empleado)
         //{
         //    foreach (Persona p in empresa._nominaEmpleados)
@@ -103,6 +104,7 @@ namespace Clase_8_Library
         //    empresa._nominaEmpleados.Add(empleado);
         //    return empresa;
         //}
+
         ///// <summary>
         ///// Agregará un accionista a una empresa, siempre y cuando no figure ya en la nómina
         ///// </summary>
