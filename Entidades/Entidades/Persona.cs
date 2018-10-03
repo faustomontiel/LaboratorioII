@@ -56,31 +56,8 @@ namespace Entidades
       }
     }
 
-    protected virtual bool ValidarDocumento(string aux)
-    {
-      if (aux.Length == 9)
-      {
-        for (int i = 0; i < aux.Length; i++)
-        {
-          if (i == 2 || i == 7)
-          {
-            if (aux[i] != '-')
-              return false;
-          }
-          else
-          {
-            if (!char.IsNumber(aux[i]))
-              return false;
-          }
-
-        }
-        return true;
-      }
-      return false;
-
-    }
-
-
+        protected abstract bool ValidarDocumento(string aux);
+    
 
     public virtual string ExponerDatos()
     {
