@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{10A02AB5-63DF-438B-8A18-E2328E3C5742}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VistaConsola", "VistaConsola\VistaConsola.csproj", "{45661B74-D81C-4932-904C-CDD5A0BB38AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VistaForm", "VistaForm\VistaForm.csproj", "{89993AA4-9965-4641-ADDA-4B010B25C599}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10A02AB5-63DF-438B-8A18-E2328E3C5742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A02AB5-63DF-438B-8A18-E2328E3C5742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A02AB5-63DF-438B-8A18-E2328E3C5742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A02AB5-63DF-438B-8A18-E2328E3C5742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45661B74-D81C-4932-904C-CDD5A0BB38AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45661B74-D81C-4932-904C-CDD5A0BB38AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45661B74-D81C-4932-904C-CDD5A0BB38AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45661B74-D81C-4932-904C-CDD5A0BB38AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89993AA4-9965-4641-ADDA-4B010B25C599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89993AA4-9965-4641-ADDA-4B010B25C599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89993AA4-9965-4641-ADDA-4B010B25C599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89993AA4-9965-4641-ADDA-4B010B25C599}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E47437D-3612-412C-B934-8A33ADD30647}
+	EndGlobalSection
+EndGlobal
