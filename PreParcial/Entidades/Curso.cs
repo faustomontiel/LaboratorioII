@@ -43,10 +43,11 @@ namespace Entidades
 
             sb.AppendLine("Año y Division: " + c.AnioDivision);
             sb.AppendLine("Profesor: " + c._profesor.ExponerDatos());
+            sb.AppendLine("****************************");
 
 
             foreach (Alumno a in c._alumnos)
-            { 
+            {
                 sb.AppendLine(a.ExponerDatos());
             }
 
@@ -68,8 +69,8 @@ namespace Entidades
         {
             if (c == a)
             {
-                if(!(a.Documento is null))
-                c._alumnos.Add(a);
+                if (!(a.Documento is null))
+                    c._alumnos.Add(a);
 
             }
 

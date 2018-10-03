@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-  public enum Divisiones
-  {
-    
-      A,
-      B,
-      C,
-      D,
-      E
-   
-  }
+    public enum Divisiones
+    {
+
+        A,
+        B,
+        C,
+        D,
+        E
+
+    }
 }

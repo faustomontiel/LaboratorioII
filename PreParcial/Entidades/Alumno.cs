@@ -59,13 +59,13 @@ namespace Entidades
 
         public override string ExponerDatos()
         {
-            
+
             StringBuilder sb = new StringBuilder();
 
-            
-                sb.AppendLine(base.ExponerDatos());
-                sb.AppendLine(" " + this.AnioDivision);
-            
+
+            sb.AppendLine(base.ExponerDatos());
+            sb.AppendLine(" " + this.AnioDivision);
+
             return sb.ToString();
         }
 
