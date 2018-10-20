@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +11,7 @@ namespace CentralitaHerencia
         //Unico atributo especial de la clase.
         protected float _costo;
 
-        public float CostoLlamada
+        public override float CostoLlamada
         {
             get
             {
@@ -32,7 +32,7 @@ namespace CentralitaHerencia
 
         }
         
-        public new string Mostrar()
+        protected override string Mostrar()
         {
             StringBuilder mostrar = new StringBuilder();
             mostrar.Append(base.Mostrar());
@@ -46,7 +46,17 @@ namespace CentralitaHerencia
         {
             return this._duracion * this._costo;
         }
+    
+    public override bool Equals(object obj)
+    {
+      bool salida = false;
 
-
+      if(obj is Local)
+      {
+        salida = true;
+      }
+      return salida;
     }
+
+  }
 }
