@@ -31,32 +31,32 @@ namespace CentralitaHerencia
         {
 
         }
-        
+
         protected override string Mostrar()
         {
             StringBuilder mostrar = new StringBuilder();
             mostrar.Append(base.Mostrar());
-            mostrar.AppendFormat("COSTO: {0}", this.CostoLlamada);
+            mostrar.AppendFormat("COSTO: {0} ", this.CostoLlamada);
 
             return mostrar.ToString();
         }
-       
-        
+
+
         private float CalcularCosto()
         {
             return this._duracion * this._costo;
         }
-    
-    public override bool Equals(object obj)
-    {
-      bool salida = false;
 
-      if(obj is Local)
-      {
-        salida = true;
-      }
-      return salida;
+        public override bool Equals(object obj)
+        {
+
+            return (obj is Local);
+        }
+
+        public override string ToString()
+        {
+            return this.Mostrar();
+        }
+
     }
-
-  }
 }

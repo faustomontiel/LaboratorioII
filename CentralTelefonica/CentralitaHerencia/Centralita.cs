@@ -21,7 +21,7 @@ namespace CentralitaHerencia
             this.razonSocial = nombreEmpresa;
         }
 
-        //Propiedades
+        #region Propiedades
         public float GananciasPorLocal
         {
             get
@@ -51,7 +51,7 @@ namespace CentralitaHerencia
                 return this.listaDeLlamadas;
             }
         }
-
+        #endregion 
 
         // metodo calcula la ganacnia por el tipo de llamada
         private float CalcularGanancia(Llamada.TipoLlamada tipo)
@@ -97,7 +97,7 @@ namespace CentralitaHerencia
         {
             this.listaDeLlamadas.Sort(Llamada.OrdenarPorDuracion);
         }
-        public string Mostrar()
+        private string Mostrar()
         {
             StringBuilder mostrar = new StringBuilder();
             mostrar.Append("*******************\n");
@@ -109,11 +109,56 @@ namespace CentralitaHerencia
             mostrar.Append("\nLLAMADAS: \n");
             foreach (Llamada llamada in this.listaDeLlamadas)
             {
-                mostrar.Append("---------------\n");
-                mostrar.Append(llamada.Mostrar());
+                mostrar.Append("\n---------------\n");
+                mostrar.Append(llamada.ToString());
             }
 
             return mostrar.ToString();
         }
+        private void AgregarLlamada(Llamada nuevaLlamada)
+        {
+            this.listaDeLlamadas.Add(nuevaLlamada);
+        }
+
+        public static bool operator ==(Centralita c, Llamada llamada)
+        {
+            bool retorno = false;
+            foreach (Llamada l in c.listaDeLlamadas)
+            {
+                if (l == llamada)
+                {
+                    retorno = true;
+                }
+            }
+            return retorno;
+        }
+
+        public static bool operator !=(Centralita c, Llamada llamada)
+        {
+            return !(c == llamada);
+        }
+
+        public static Centralita operator +(Centralita c, Llamada nuevaLlamada)
+        {
+            if (c != nuevaLlamada)
+            {
+                c.AgregarLlamada(nuevaLlamada);
+            }
+            else
+            {
+                throw new CentralitaException("Llamda ya existente", c.GetType().ToString(), "Sobrecarga +");
+            }
+            return c;
+        }
+        public override string ToString()
+        {
+            return this.Mostrar();
+        }
+
+
+
+
+
+
     }
 }
