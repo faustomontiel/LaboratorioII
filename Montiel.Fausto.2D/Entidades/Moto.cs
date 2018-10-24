@@ -10,35 +10,35 @@ namespace Entidades
     {
         private int _cilindrada;
         private short _rueda;
-        private int _valorHora;
+        private static int _valorHora;
 
-        private Moto() : base("")
-        { 
-
-        }
-
-
-        public Moto(string patente,int cilindrada)
-            :base(patente)
+        static Moto()
         {
-            this._cilindrada = cilindrada;
-            this._valorHora = 30;
-        }
-        public Moto(string patente, int cilindrada,short ruedas)
-            : this(patente,cilindrada)
-        {
-            this._rueda = ruedas;
-            this._valorHora = 30;
-        }
-        public Moto(string patente, int cilindrada, short ruedas,int valorHora)
-            : this(patente, cilindrada,ruedas)
-        {
-            this._valorHora = valorHora;
+            _valorHora = 30;
         }
 
         public Moto(string patente) : base(patente)
         {
         }
+
+        public Moto(string patente,int cilindrada)
+            :this(patente)
+        {
+            this._cilindrada = cilindrada;
+        }
+        public Moto(string patente, int cilindrada,short ruedas)
+            : this(patente,cilindrada)
+        {
+            this._rueda = ruedas;
+            
+        }
+        public Moto(string patente, int cilindrada, short ruedas,int valorHora)
+            : this(patente, cilindrada,ruedas)
+        {
+            Moto._valorHora = valorHora;
+        }
+
+        
 
         public override string ConsultarDatos()
         {
@@ -52,7 +52,7 @@ namespace Entidades
             sb.Append(base.ImprimirTicket());
             sb.AppendLine("Cilindrada: "+ this._cilindrada);
 
-            costo = (int)(DateTime.Now - this._ingreso).TotalHours * this._valorHora;
+            costo = (int)(DateTime.Now - this._ingreso).TotalHours * Moto._valorHora;
             sb.AppendLine("Costo Estadia: "+ costo);
 
             return sb.ToString();
@@ -68,8 +68,6 @@ namespace Entidades
             }
             return retorno;
         }
-
-
 
     }
 }

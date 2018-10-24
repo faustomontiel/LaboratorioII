@@ -9,12 +9,12 @@ namespace Entidades
     public class PickUp : Vehiculo
     {
         private string _modelo;
-        private int _valorHora;
+        private static int _valorHora;
 
 
-        private PickUp():base("")
+        static PickUp()
         {
-            
+           PickUp._valorHora = 70;
         }
 
 
@@ -22,13 +22,15 @@ namespace Entidades
             : base(patente)
         {
             this._modelo = modelo;
-            this._valorHora = 70;
+            
         }
         public PickUp(string patente, string modelo, int valorHora)
             : this(patente, modelo)
         {
-            this._valorHora = valorHora;
+            PickUp._valorHora = valorHora;
         }
+
+
         public override string ConsultarDatos()
         {
             return this.ImprimirTicket();
@@ -42,7 +44,7 @@ namespace Entidades
             sb.Append(base.ImprimirTicket());
             sb.AppendLine("Modelo: "+this._modelo);
 
-            costo = (int)(DateTime.Now - this._ingreso).TotalHours * this._valorHora;
+            costo = (int)(DateTime.Now - this._ingreso).TotalHours * PickUp._valorHora;
             sb.AppendLine("Costo Estadia: " + costo);
 
 

@@ -50,10 +50,15 @@ namespace Entidades
         public virtual string ImprimirTicket()
         {
             StringBuilder sb = new StringBuilder();
-
-            sb.AppendFormat(this.ToString());
-            sb.AppendFormat("Fecha de Ingreso: {0} ", this._ingreso);
-
+            if (!ReferenceEquals(this.Patente, null))
+            {
+                sb.AppendFormat(this.ToString());
+                sb.AppendFormat("Fecha de Ingreso: {0} ", this._ingreso);
+            }
+            else
+            {
+                sb.AppendLine("PATENTE INVALIDA");
+            }
             return sb.ToString();
         }
 

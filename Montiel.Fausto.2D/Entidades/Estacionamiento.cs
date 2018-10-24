@@ -85,8 +85,7 @@ namespace Entidades
                 foreach (Vehiculo v in e._vehiculos)
                 {
                     if (!ReferenceEquals(v.Patente, null))
-                        
-                    sb.AppendLine(v.ConsultarDatos());
+                        sb.AppendLine(v.ConsultarDatos());
                 }
 
 

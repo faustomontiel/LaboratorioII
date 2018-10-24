@@ -9,22 +9,23 @@ namespace Entidades
     public class Automovil : Vehiculo
     {
         private ConsoleColor _color;
-        private int _valorHora;
+        private static int _valorHora;
 
-        private Automovil():base("")
+        static Automovil()
         {
+            Automovil._valorHora = 50;
         }
 
         public Automovil(string patente, ConsoleColor color)
             : base(patente)
         {
             this._color = color;
-            this._valorHora = 50;
+
         }
         public Automovil(string patente, ConsoleColor color, int valorHora)
             : this(patente, color)
         {
-            this._valorHora = valorHora;
+            Automovil._valorHora = valorHora;
         }
 
         public override string ConsultarDatos()
@@ -40,7 +41,7 @@ namespace Entidades
             sb.Append(base.ImprimirTicket());
             sb.AppendFormat("Color:{0}", this._color);
 
-            costo = (int)(DateTime.Now-this._ingreso).TotalHours * this._valorHora;
+            costo = (int)(DateTime.Now - this._ingreso).TotalHours * Automovil._valorHora;
             sb.AppendLine("Costo Estadia: " + costo);
 
             return sb.ToString();
