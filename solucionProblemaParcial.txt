@@ -1,0 +1,4 @@
+Es un constructor estatico.
+El valor hora tambien es un constructor estatico.
+
+El paramtrro de valor hora lo paso en  la instancia como Moto.valorhora.
