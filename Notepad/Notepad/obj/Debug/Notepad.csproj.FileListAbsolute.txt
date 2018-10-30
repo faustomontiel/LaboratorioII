@@ -8,3 +8,13 @@ D:\VisualStudio\Notepad\Notepad\obj\Debug\Notepad.csproj.GenerateResource.cache
 D:\VisualStudio\Notepad\Notepad\obj\Debug\Notepad.csproj.CoreCompileInputs.cache
 D:\VisualStudio\Notepad\Notepad\obj\Debug\Notepad.exe
 D:\VisualStudio\Notepad\Notepad\obj\Debug\Notepad.pdb
+C:\Users\alumno\LaboratorioII\Notepad\Notepad\bin\Debug\Notepad.exe.config
+C:\Users\alumno\LaboratorioII\Notepad\Notepad\bin\Debug\Notepad.exe
+C:\Users\alumno\LaboratorioII\Notepad\Notepad\bin\Debug\Notepad.pdb
+C:\Users\alumno\LaboratorioII\Notepad\Notepad\obj\Debug\Notepad.csprojAssemblyReference.cache
+C:\Users\alumno\LaboratorioII\Notepad\Notepad\obj\Debug\Notepad.Form1.resources
+C:\Users\alumno\LaboratorioII\Notepad\Notepad\obj\Debug\Notepad.Properties.Resources.resources
+C:\Users\alumno\LaboratorioII\Notepad\Notepad\obj\Debug\Notepad.csproj.GenerateResource.cache
+C:\Users\alumno\LaboratorioII\Notepad\Notepad\obj\Debug\Notepad.csproj.CoreCompileInputs.cache
+C:\Users\alumno\LaboratorioII\Notepad\Notepad\obj\Debug\Notepad.exe
+C:\Users\alumno\LaboratorioII\Notepad\Notepad\obj\Debug\Notepad.pdb

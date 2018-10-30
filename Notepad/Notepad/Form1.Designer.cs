@@ -1,4 +1,4 @@
-﻿namespace Notepad
+namespace Notepad
 {
     partial class Form1
     {
@@ -73,18 +73,19 @@
             this.mnuAbrir.Name = "mnuAbrir";
             this.mnuAbrir.Size = new System.Drawing.Size(180, 22);
             this.mnuAbrir.Text = "Abrir";
+            this.mnuAbrir.Click += new System.EventHandler(this.mnuAbrir_Click);
             // 
             // mnuGuardar
             // 
             this.mnuGuardar.Name = "mnuGuardar";
-            this.mnuGuardar.Size = new System.Drawing.Size(180, 22);
+            this.mnuGuardar.Size = new System.Drawing.Size(159, 22);
             this.mnuGuardar.Text = "Guardar";
             this.mnuGuardar.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // mnuGuardarComo
             // 
             this.mnuGuardarComo.Name = "mnuGuardarComo";
-            this.mnuGuardarComo.Size = new System.Drawing.Size(180, 22);
+            this.mnuGuardarComo.Size = new System.Drawing.Size(159, 22);
             this.mnuGuardarComo.Text = "Guardar como...";
             this.mnuGuardarComo.Click += new System.EventHandler(this.guardarComoToolStripMenuItem_Click);
             // 
@@ -112,6 +113,7 @@
             this.rchText.Size = new System.Drawing.Size(800, 404);
             this.rchText.TabIndex = 4;
             this.rchText.Text = "";
+            this.rchText.TextChanged += new System.EventHandler(this.rchText_TextChanged);
             // 
             // Form1
             // 
