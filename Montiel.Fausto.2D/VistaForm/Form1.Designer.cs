@@ -88,7 +88,8 @@
             this.Controls.Add(this.txtPatente);
             this.Controls.Add(this.lblPatente);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "PickUp";
             this.ResumeLayout(false);
             this.PerformLayout();
 
