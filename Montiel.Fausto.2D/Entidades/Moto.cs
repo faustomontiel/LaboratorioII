@@ -34,15 +34,23 @@ namespace Entidades
         }
         public Moto(string patente, int cilindrada, short ruedas,int valorHora)
             : this(patente, cilindrada,ruedas)
-        {
-            Moto._valorHora = valorHora;
+        {         
         }
-
-        
 
         public override string ConsultarDatos()
         {
-            return this.ImprimirTicket();
+            StringBuilder sb = new StringBuilder();
+
+            if (!ReferenceEquals(this.Patente, null))
+            {
+                sb.Append(this.ToString());
+                sb.AppendLine("Cilindrada: " + this._cilindrada);
+            }
+            else
+            {
+                sb.AppendLine("PATENTE INVALIDA");
+            }
+            return sb.ToString();
         }
         public override string ImprimirTicket()
         {
@@ -50,7 +58,7 @@ namespace Entidades
             int costo;
 
             sb.Append(base.ImprimirTicket());
-            sb.AppendLine("Cilindrada: "+ this._cilindrada);
+            
 
             costo = (int)(DateTime.Now - this._ingreso).TotalHours * Moto._valorHora;
             sb.AppendLine("Costo Estadia: "+ costo);
@@ -62,12 +70,11 @@ namespace Entidades
         {
             bool retorno = false;
 
-            if (this == obj)
+            if ((obj is Moto))
             {
                 retorno = true;
             }
             return retorno;
         }
-
     }
 }

@@ -12,7 +12,7 @@ namespace VistaConsola
         static void Main(string[] args)
         {
 
-            Estacionamiento e = new Estacionamiento("UTN", 6);
+            Estacionamiento e = new Estacionamiento("UTN",6);
             // Creación de Vehículos
 
             Console.WriteLine("MOTOS");
@@ -40,19 +40,19 @@ namespace VistaConsola
 
             Console.WriteLine("--------------------------------");
             Console.WriteLine("--------------------------------");
-            Console.WriteLine("Estacionamiento Ingreso");
+            Console.WriteLine("Estacionamiento Ingreso");       
             e += m1;
             e += p1;
             e += a1;
-            e += m1;
-            e += p1;
-            e += a1;
-            e += m2;
-            e += p2;
+            e += m1;//
+            e += p1;//
+            e += a1;//
+            e += m2;//
+            e += p2;//
             e += a2;
             e += m3;
+
             Console.WriteLine((string)e);
-            Console.WriteLine("--------------------------------");
             Console.WriteLine("--------------------------------");
             Console.WriteLine("--------------------------------");
             Console.WriteLine("Estacionamiento Egreso");

@@ -40,48 +40,26 @@ namespace Entidades
                 if (!ReferenceEquals(vehiculo.Patente, null))
                 {
                     estacionamiento._vehiculos.Remove(vehiculo);
-                    switch(estacionamiento._vehiculos.Count)
-                    {
-                        case 6:
-                            estacionamiento._espacioDisponible = 1;
-                            break;
-                        case 5:
-                            estacionamiento._espacioDisponible = 2;
-                            break;
-                        case 4:
-                            estacionamiento._espacioDisponible = 3;
-                            break;
-                        case 3:
-                            estacionamiento._espacioDisponible = 4;
-                            break;
-                        case 2:
-                            estacionamiento._espacioDisponible = 5;
-                            break;
-                        case 1:
-                            estacionamiento._espacioDisponible = 6;
-                            break;
-                        default:
-                            estacionamiento._espacioDisponible = 6;
-                            break;
-                    }
-                    Console.WriteLine(vehiculo.ImprimirTicket());
+                   
+                    Console.WriteLine("***HASTA LA PROXIMA***"+vehiculo.ImprimirTicket());
                 }
                 
             }
+            else
+            {
+                Console.WriteLine("No pertenece al ESTABLECIMIENTO");
+            }
+                 
         
             return (string)estacionamiento;
         }
         public static explicit operator string(Estacionamiento e)
         {
             StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine("Nombre Estacionamiento: " + e.nombre);
-            sb.AppendLine("Espacio Disponible:  "+ e._espacioDisponible);
-            
-            
-
+        
             if (!ReferenceEquals(e._vehiculos, null))
             {
+                sb.AppendLine("Nombre Estacionamiento: " + e.nombre);
                 foreach (Vehiculo v in e._vehiculos)
                 {
                     if (!ReferenceEquals(v.Patente, null))
@@ -97,7 +75,7 @@ namespace Entidades
         {
             bool retorno = false;
 
-            if (!ReferenceEquals(estacionamiento._vehiculos, null) && estacionamiento._vehiculos.Contains(vehiculo))
+            if (!ReferenceEquals(estacionamiento._vehiculos, null) && estacionamiento._vehiculos.Contains(vehiculo) )
             {
                 retorno = true;
             }

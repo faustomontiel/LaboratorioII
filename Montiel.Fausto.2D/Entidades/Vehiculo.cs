@@ -50,6 +50,7 @@ namespace Entidades
         public virtual string ImprimirTicket()
         {
             StringBuilder sb = new StringBuilder();
+
             if (!ReferenceEquals(this.Patente, null))
             {
                 sb.AppendFormat(this.ToString());
@@ -65,7 +66,7 @@ namespace Entidades
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
             bool retorno = false;
-            if(v1._patente==v2._patente) 
+            if(Equals(v1,v2) && v1._patente==v2._patente) 
             {
                 retorno = true;
             }
@@ -76,17 +77,17 @@ namespace Entidades
         {
             return !(v1 == v2);
         }
-
+        
         public override bool Equals(object obj)
         {
             bool retorno = false;
 
-            if (this == obj)
+            if (obj is Vehiculo)
             {
                 retorno = true;
             }
             return retorno;
         }
-
+        
     }
 }

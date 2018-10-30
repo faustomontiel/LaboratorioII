@@ -12,9 +12,9 @@ namespace Clase_15
         {
             try
             {
-                //int numero = Parser.Parse("a");
+                int numero = Parser.Parse("a");
                 //int numero = Parser.Parse("999999999999999999");
-                int numero = Parser.Parse("9999");
+               // int numero = Parser.Parse("9999");
                 Console.WriteLine("Conversión exitosa: "+numero);
             }
             catch (ErrorParserException e)

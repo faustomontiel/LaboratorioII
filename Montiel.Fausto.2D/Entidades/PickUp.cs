@@ -14,7 +14,7 @@ namespace Entidades
 
         static PickUp()
         {
-           PickUp._valorHora = 70;
+            PickUp._valorHora = 70;
         }
 
 
@@ -22,19 +22,31 @@ namespace Entidades
             : base(patente)
         {
             this._modelo = modelo;
-            
+
         }
         public PickUp(string patente, string modelo, int valorHora)
             : this(patente, modelo)
         {
-            PickUp._valorHora = valorHora;
         }
+
 
 
         public override string ConsultarDatos()
         {
-            return this.ImprimirTicket();
+            StringBuilder sb = new StringBuilder();
+
+            if (!ReferenceEquals(this.Patente,null)) {
+                sb.Append(this.ToString());
+                sb.AppendLine("Modelo: " + this._modelo);
+            }
+            else
+            {
+                sb.AppendLine("PATENTE INVALIDA");
+            }
+
+            return sb.ToString();
         }
+
 
         public override string ImprimirTicket()
         {
@@ -42,8 +54,7 @@ namespace Entidades
             int costo;
 
             sb.Append(base.ImprimirTicket());
-            sb.AppendLine("Modelo: "+this._modelo);
-
+            
             costo = (int)(DateTime.Now - this._ingreso).TotalHours * PickUp._valorHora;
             sb.AppendLine("Costo Estadia: " + costo);
 
@@ -55,7 +66,7 @@ namespace Entidades
         {
             bool retorno = false;
 
-            if (this == obj)
+            if ((obj is PickUp))
             {
                 retorno = true;
             }

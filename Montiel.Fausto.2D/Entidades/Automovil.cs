@@ -25,12 +25,22 @@ namespace Entidades
         public Automovil(string patente, ConsoleColor color, int valorHora)
             : this(patente, color)
         {
-            Automovil._valorHora = valorHora;
         }
 
         public override string ConsultarDatos()
         {
-            return this.ImprimirTicket();
+            StringBuilder sb = new StringBuilder();
+            if (!ReferenceEquals(this.Patente, null))
+            {
+                sb.Append(this.ToString());
+            sb.AppendLine("Color: " + this._color);
+        }
+            else
+            {
+                sb.AppendLine("PATENTE INVALIDA");
+            }
+
+            return sb.ToString();
         }
 
         public override string ImprimirTicket()
@@ -50,7 +60,7 @@ namespace Entidades
         {
             bool retorno = false;
 
-            if (this == obj)
+            if (obj is Automovil )
             {
                 retorno = true;
             }

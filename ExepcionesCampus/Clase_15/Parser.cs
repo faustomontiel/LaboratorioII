@@ -10,24 +10,12 @@ namespace Clase_15
   {
     
     static string messageCatch;
+
     static Parser()
     {
       Parser.messageCatch = "El string no podrá ser convertido";
     }
-    
-    public static bool TryParse(string dato, out int salida)
-    {
-      try
-      {
-        salida = Parse(dato);
-        return true;
-      }
-      catch (Exception e)
-      {
-        salida = 0;
-        return false;
-      }
-    }
+
     public static int Parse(string dato)
     {
       try
