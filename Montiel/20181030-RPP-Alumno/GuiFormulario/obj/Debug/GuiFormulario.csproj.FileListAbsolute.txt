@@ -1,0 +1,12 @@
+D:\Federico\VB .Net\Visual C#\20181030-RPP-Boullon\GuiFormulario\bin\Debug\GuiFormulario.exe.config
+D:\Federico\VB .Net\Visual C#\20181030-RPP-Boullon\GuiFormulario\bin\Debug\GuiFormulario.exe
+D:\Federico\VB .Net\Visual C#\20181030-RPP-Boullon\GuiFormulario\bin\Debug\GuiFormulario.pdb
+D:\Federico\VB .Net\Visual C#\20181030-RPP-Boullon\GuiFormulario\obj\Debug\GuiFormulario.csprojResolveAssemblyReference.cache
+D:\Federico\VB .Net\Visual C#\20181030-RPP-Boullon\GuiFormulario\obj\Debug\GuiFormulario.FrmSirviente.resources
+D:\Federico\VB .Net\Visual C#\20181030-RPP-Boullon\GuiFormulario\obj\Debug\GuiFormulario.Properties.Resources.resources
+D:\Federico\VB .Net\Visual C#\20181030-RPP-Boullon\GuiFormulario\obj\Debug\GuiFormulario.csproj.GenerateResource.Cache
+D:\Federico\VB .Net\Visual C#\20181030-RPP-Boullon\GuiFormulario\obj\Debug\GuiFormulario.exe
+D:\Federico\VB .Net\Visual C#\20181030-RPP-Boullon\GuiFormulario\obj\Debug\GuiFormulario.pdb
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20181030-RPP-Boullon\GuiFormulario\bin\Debug\GuiFormulario.exe.config
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20181030-RPP-Boullon\GuiFormulario\obj\Debug\GuiFormulario.exe
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20181030-RPP-Boullon\GuiFormulario\obj\Debug\GuiFormulario.pdb
