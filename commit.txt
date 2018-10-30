@@ -6,3 +6,82 @@ git commit -m 'commit'
 git push -u origin master
 
 .000
+
+
+
+
+
+
+
+ private List<string> paginas;
+
+        public Libro()
+        {
+            paginas = new List<string>();
+        }
+
+
+        public string this[int i]
+        {
+            get
+            {
+                string retorno = "";
+
+                if(i < paginas.Count)
+                {
+                    retorno = paginas.ElementAt(i);
+                }
+                
+                return retorno;
+            }
+
+            set
+            {
+                if(i > paginas.Count)
+                {
+                    paginas.Add(value);
+                }
+                else
+                {
+                    paginas.Insert(i, value);
+                }
+                
+            }
+
+        }
+
+
+
+
+private List<string> paginas = new List<string>();
+        
+        public string this[int i]
+        {
+            get
+            {
+                if (i < paginas.Count && i >= 0)
+                    return paginas[i];
+                return "";
+            }
+            set
+            {
+                if (i >= 0 && i < paginas.Count)
+                {
+                    paginas[i] = (value);
+                }
+                else
+                    paginas.Add(value);
+            }
+        }
+
+            Libro book = new Libro();
+            for(int i = 0; i < 20; i++)
+            {
+                book[i] = "Capitulo " + i;
+            }
+            Console.WriteLine(book[18]);
+            book[18] = "Capitulo modificado";
+            Console.WriteLine(book[18]);
+            book[50] = "Capitulo 20";
+            Console.WriteLine(book[20]);
+            Console.ReadKey();
